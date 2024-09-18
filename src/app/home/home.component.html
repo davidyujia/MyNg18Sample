@@ -1,0 +1,36 @@
+<mat-toolbar class="app-header" style="background-color: red;">
+  <span>My Application</span>
+</mat-toolbar>
+
+<mat-sidenav-container class="app-container">
+  <mat-sidenav class="app-sidenav" opened="true" mode="side">
+    <mat-list>
+      <mat-list-item>
+        <span matListItemTitle>Pepper</span>
+        <span matListItemLine>Produced by a plant</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>Salt</span>
+        <span matListItemLine>Extracted from sea water</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>Paprika</span>
+        <span matListItemLine>Produced by dried and ground red peppers</span>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button mat-button>Basic</button>
+    <button mat-button color="primary">Primary</button>
+    <button mat-button color="accent">Accent</button>
+    <button mat-button color="warn">Warn</button>
+    <button mat-button disabled>Disabled</button>asdasdsad
+    <br />
+
+    <input [(ngModel)]="model" type="text" />
+    <app-app-input [input]="model" (submit)="onSubmit($event)"></app-app-input>
+    {{backValue}}
+    <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
