@@ -1,4 +1,4 @@
-<mat-toolbar class="app-header" style="background-color: red;">
+<mat-toolbar class="app-header" style="background-color: red;" color="Primary">
   <span>My Application</span>
 </mat-toolbar>
 
@@ -20,16 +20,20 @@
     </mat-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <button mat-button>Basic</button>
-    <button mat-button color="primary">Primary</button>
-    <button mat-button color="accent">Accent</button>
-    <button mat-button color="warn">Warn</button>
-    <button mat-button disabled>Disabled</button>asdasdsad
+    <button mat-flat-button>Basic</button>
+    <button mat-flat-button color="primary">Primary</button>
+    <button mat-flat-button color="accent">Accent</button>
+    <button mat-flat-button color="warn">Warn</button>
+    <button mat-flat-button disabled>Disabled</button>
     <br />
 
     <input [(ngModel)]="model" type="text" />
     <app-app-input [input]="model" (submit)="onSubmit($event)"></app-app-input>
     {{backValue}}
+
+    ||
+    <input [(ngModel)]="inOut" type="text" />
+    <app-in-out-test [(value)]="inOut"></app-in-out-test>
     <router-outlet></router-outlet>
 
   </mat-sidenav-content>

@@ -7,15 +7,17 @@ import { MatListModule } from '@angular/material/list';
 import { AppInputComponent } from "../app-input/app-input.component";
 
 import { FormsModule } from '@angular/forms';
+import { InOutTestComponent } from "../in-out-test/in-out-test.component";
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatListModule, AppInputComponent],
+  imports: [RouterOutlet, FormsModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatListModule, AppInputComponent, InOutTestComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
   model = '';
+  inOut = '';
   ngOnInit() {
     console.log('init')
   }
