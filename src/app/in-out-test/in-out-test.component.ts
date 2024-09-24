@@ -11,7 +11,4 @@ import { FormsModule } from '@angular/forms';
 export class InOutTestComponent {
   @Input() value = '';
   @Output() valueChange = new EventEmitter<string>();
-  onChange(s: string) {
-    this.valueChange.emit(s);
-  }
 }

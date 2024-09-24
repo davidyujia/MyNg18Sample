@@ -1,1 +1,1 @@
-<p>in-out-test works! {{value}}<input type="text" [(ngModel)]="value" (ngModelChange)="onChange($event)"/></p>
+<p>in-out-test works! {{value}}<input type="text" [(ngModel)]="value" (ngModelChange)="valueChange.emit($event)"/></p>
