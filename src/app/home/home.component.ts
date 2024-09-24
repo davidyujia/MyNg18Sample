@@ -8,16 +8,19 @@ import { AppInputComponent } from "../app-input/app-input.component";
 
 import { FormsModule } from '@angular/forms';
 import { InOutTestComponent } from "../in-out-test/in-out-test.component";
+import { JsonPipe } from '@angular/common';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatListModule, AppInputComponent, InOutTestComponent],
+  imports: [JsonPipe, RouterOutlet, FormsModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatListModule, AppInputComponent, InOutTestComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
   model = '';
   inOut = '';
+  jsonObj = { name: 'a', value: 'b' }
+
   ngOnInit() {
     console.log('init')
   }

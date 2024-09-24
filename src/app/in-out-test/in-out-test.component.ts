@@ -11,4 +11,10 @@ import { FormsModule } from '@angular/forms';
 export class InOutTestComponent {
   @Input() value = '';
   @Output() valueChange = new EventEmitter<string>();
+
+  @Input() json: any = {};
+  @Output() jsonChange = new EventEmitter<any>();
+  jsonUpdate() {
+    this.jsonChange.emit(this.json);
+  }
 }

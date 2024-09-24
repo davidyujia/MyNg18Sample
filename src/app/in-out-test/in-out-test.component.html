@@ -1,1 +1,3 @@
 <p>in-out-test works! {{value}}<input type="text" [(ngModel)]="value" (ngModelChange)="valueChange.emit($event)"/></p>
+
+<input type="text" [(ngModel)]="json.name" (ngModelChange)="jsonUpdate()"/>
