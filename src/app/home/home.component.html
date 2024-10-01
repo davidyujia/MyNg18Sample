@@ -27,6 +27,8 @@
     <button mat-flat-button disabled>Disabled</button>
     <br />
 
+    <button mat-flat-button (click)="do()">Action</button>
+
     <input [(ngModel)]="model" type="text" />
     <app-app-input [input]="model" (submit)="onSubmit($event)"></app-app-input>
     {{backValue}}
