@@ -19,7 +19,7 @@ export class BrowserNotificetionComponent {
           let notify = new Notification("New Notification", { body: 'message content', tag: 'Notification', icon: '/favicon.ico' });
           notify.onclick = (e) => {
             e.preventDefault(); // prevent the browser from focusing the Notification's tab
-
+            window.focus();
             notify.close();
           }
         }
