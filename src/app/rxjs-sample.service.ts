@@ -1,16 +1,10 @@
-import { Component } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
-@Component({
-  selector: 'app-rxjs-sample',
-  standalone: true,
-  imports: [],
-  templateUrl: './rxjs-sample.component.html',
-  styleUrl: './rxjs-sample.component.scss'
+@Injectable({
+  providedIn: 'root'
 })
-export class RxjsSampleComponent {
-
-  //new subject
+export class RxjsSampleService {
   subject?: Subject<any> = new Subject<string>();
 
   send(v: any) {
@@ -30,5 +24,4 @@ export class RxjsSampleComponent {
       }
     })
   }
-
 }
