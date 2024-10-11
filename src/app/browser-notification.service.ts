@@ -1,14 +1,13 @@
-import { Component } from '@angular/core';
+import { Injectable } from '@angular/core';
 
-@Component({
-  selector: 'app-browser-notificetion',
-  standalone: true,
-  imports: [],
-  templateUrl: './browser-notificetion.component.html',
-  styleUrl: './browser-notificetion.component.scss'
+@Injectable({
+  providedIn: 'root'
 })
-export class BrowserNotificetionComponent {
-  ngAfterContentInit() {
+export class BrowserNotificationService {
+
+  constructor() { }
+
+  Send() {
 
     if (!('Notification' in window)) {
       console.error('This browser does not support notification');
