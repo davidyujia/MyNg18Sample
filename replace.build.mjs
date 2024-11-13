@@ -8,8 +8,8 @@ var buildVersion = new Date().toISOString();
 
 const options = {
   files: 'src/environments/environment.ts',
-  from: [/{BUILD_VERSION}/g, /{FILE_VERSION}/g],
-  to: [buildVersion, json.version]
+  from: [/timestamp: '(.*)'/g, /version: '(.*)'/g],
+  to: [`timestamp: '${buildVersion}'`, `version: '${json.version}'`]
 };
 
 try {
