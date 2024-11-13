@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Modules } from '../app.component';
 import { EventService } from '../event.service';
+import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -9,6 +10,7 @@ import { EventService } from '../event.service';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  environment = environment;
   model = '';
   inOut = '';
   jsonObj = { name: 'a', value: 'b' }

@@ -39,6 +39,11 @@
 
     {{ jsonObj | json}}
     <router-outlet></router-outlet>
-
+    <div>
+      {{environment.version}}
+    </div>
+    <div>
+      {{environment.timestamp}}
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
